@@ -1,0 +1,130 @@
+.contactfooter{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0 60px 0;
+    background-color: #232323;
+}
+
+.contactfooter__container-infocontact{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.contactfooter__infocontact{
+    display: flex;
+    gap: 20px;
+}
+
+.contactfooter__infocontact-container-ico{
+    width: 50px;
+}
+
+.contactfooter__infocontact-ico{
+    width: 45px;
+    height: 45px;
+    background-color: aliceblue;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactfooter__infocontact-ico2{
+    width: 40px;
+    height: 40px;
+    background-color: aliceblue;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactfooter__infocontact-ico svg{
+    fill: red; 
+}
+
+.contactfooter__infocontact-text-container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 80%;
+    overflow: hidden;
+}
+
+.contactfooter__infocontact-text-title{
+    font-size: 25px;
+    color: aliceblue;
+    font-weight: 700;
+}
+
+.contactfooter__infocontact-text-subtitle{
+    color: aliceblue;
+    font-size: 18px;
+}
+
+.contactfooter__infocontact-text-link{
+    color: red;
+    text-decoration: none;
+    font-size: 16px;
+    word-break: break-all;
+}
+
+.contactfooter__infocontact-text-hour{
+    color: aliceblue;
+    font-size: 19px;
+}
+
+.contactfooter__infocontact-text{
+    color: aliceblue;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.contactfooter__infocontact-text span{
+    font-weight: 400;
+}
+
+.contactfooter__socialmedia{
+    width: 80%;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.contactfooter__socialmedia-facebook{
+    width: 30px;
+    fill: aliceblue !important;
+}
+
+.contactfooter__socialmedia-google{
+    width: 50px;
+    fill: aliceblue !important;
+}
+
+@media screen and (min-width: 1024px){
+    .contactfooter{
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 60px;
+    }
+
+    .contactfooter__container-infocontact{
+        width: 40%;
+        margin-top: 0 !important;
+    }
+}
+
+@media screen and (min-width: 1440px){
+    .contactfooter__container-infocontact{
+        width: 500px;
+    }
+}

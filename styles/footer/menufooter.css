@@ -1,0 +1,45 @@
+.menufooter{
+    width: 100%;
+    background-color: #2d2d2d;
+    display: flex;
+    justify-content: center;
+}
+
+.menufooter__container{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.menufooter__item{
+    color: #c0c0c0;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all .3s;
+}
+
+.menufooter__item:hover{
+    opacity: 0.8;
+}
+
+@media screen and (min-width: 768px){
+    .menufooter__container{
+        width: 75%;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .menufooter__container{
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (min-width: 1440px){
+    .menufooter__container{
+        width: 1000px;
+    }
+}

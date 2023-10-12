@@ -1,0 +1,110 @@
+.headercomponent{
+    width: 100%;
+    height: 130px;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+}
+
+.headercomponent__container{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 10px 0;
+}
+
+.headercomponent__container-image{
+    width: 100%;
+    grid-column: 1 / 3;
+}
+
+.headercomponent__size-image{
+    position: relative;
+    width: 110px;
+    height: 80px;
+}
+
+.headercomponent__container-icomenu{
+    width: 100%;
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.headercomponent__container-callme{
+    width: 100%;
+    grid-column: 1 / 4;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.headercomponent__text-callme{
+    font-size: 17px;
+    color: #6a6a6a;
+    display: flex;
+    gap: 5px;
+    font-weight: 600;
+}
+.headercomponent__link-callme{
+    text-decoration: none;
+    color: #e62626;
+}
+
+@media screen and (min-width: 425px){
+    .headercomponent__text-callme{
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .headercomponent{
+        background-color: rgba(0, 0, 0, 0.5);
+        position: fixed;
+        top: 42px;
+        z-index: 1002;
+        height: auto;
+    }
+
+    .headercomponent__container{
+        width: 900px;
+    }
+
+    .headercomponent__size-image{
+        width: 160px;
+        height: 120px;
+    }
+
+    .headercomponent__container-icomenu svg{
+        fill: #dd0404;
+    }
+
+    .headercomponent__container-callme{
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1440px){
+
+    .headercomponent__container{
+        width: 1300px;
+    }
+
+    .headercomponent__container-image{
+        grid-column: 1 / 2;
+    }
+
+    .headercomponent__container-icomenu{
+        grid-column: 2 / 4;
+    }
+
+    .headercomponent__size-image{
+        width: 200px;
+        height: 150px;
+    }
+
+    .headercomponent__container-icomenu svg{
+        display: none;
+    }
+}

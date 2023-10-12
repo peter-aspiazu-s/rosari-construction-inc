@@ -1,0 +1,61 @@
+.servicecomponent{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 30px 20px;
+    position: relative;
+    width: 100%;
+    background-size: cover;    
+    background-position: center;
+    text-decoration: none;
+}
+
+.servicecomponent__background{
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.servicecomponent__title{
+    color: aliceblue;
+    font-size: 30px;
+    position: relative;
+    z-index: 2;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.servicecomponent svg{
+    display: none;
+}
+
+.servicecomponent__description{
+    color: aliceblue;
+    position: relative;
+    z-index: 2;
+    font-weight: 600;
+    line-height: 30px;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 1440px){
+    .servicecomponent svg{
+        display: flex;
+        position: absolute;
+        top: 40px;
+        left: 50px;
+        opacity: 0;
+        transition: all 1s;
+        fill: aliceblue;
+        z-index: 2;
+    }
+
+    .servicecomponent:hover svg{
+        left: 120px;
+        opacity: 1;
+    }
+}

@@ -1,0 +1,36 @@
+.supcallme{
+    display: none;
+}
+
+@media screen and (min-width: 1024px){
+    .supcallme{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 7px 30px;
+        background-color: black;
+        position: fixed;
+        top: 0;
+        z-index: 1003;
+    }
+
+    .supcallme__container{
+        display: flex;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .supcallme__container-ico{
+        margin-right: 5px;
+    }
+    .supcallme__container-ico svg{
+        fill: aliceblue;
+    }
+
+    .supcallme__container-text a{
+        color: aliceblue;
+        text-decoration: none;
+        font-weight: 600;
+    }
+}

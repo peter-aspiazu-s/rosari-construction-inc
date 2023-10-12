@@ -1,0 +1,27 @@
+.sectionservicecontainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: aliceblue;
+}
+
+.sectionservicecontainer__container{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 50px 0 100px 0;
+}
+
+@media screen and (min-width: 1024px){
+    .sectionservicecontainer__container{
+        flex-direction: row;
+        gap: 50px;
+    }
+}
+
+@media screen and (min-width: 1440px){
+    .sectionservicecontainer__container{
+        width: 1100px;
+    }
+}

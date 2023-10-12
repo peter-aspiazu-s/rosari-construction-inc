@@ -1,0 +1,28 @@
+.navbar{
+    display: none;
+}
+
+@media screen and (min-width: 1440px){
+    .navbar{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbar__container{
+        display: flex;
+        gap: 25px;
+    }
+
+    .navbar__item{
+        font-size: 14px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: all .3s;
+    }
+
+    .navbar__item:hover{
+        opacity: 0.8;
+    }
+}
