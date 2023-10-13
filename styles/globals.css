@@ -20,3 +20,10 @@
 @import url(./homepage/experience/sectionservicecontainer.css);
 @import url(./homepage/experience/servicecomponent.css);
 @import url(./homepage/reviews/reviewscomponents.css);
+@import url(./homepage/about/aboutcomponent.css);
+@import url(./homepage/partners/partnerscomponent.css);
+@import url(./servicePage/servicePage.css);
+@import url(./servicePage/infoServiceComponet.css);
+@import url(./servicePage/slideServiceComponent.css);
+@import url(./accordion/accordioncomponent.css);
+@import url(./servicePage/thingsService.css);

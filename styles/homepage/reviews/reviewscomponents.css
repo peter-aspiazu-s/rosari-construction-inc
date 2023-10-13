@@ -54,6 +54,7 @@
     text-decoration: none;
     font-size: 15px;
     padding: 10px;
+    color: #000;
 }
 
 @media screen and (min-width: 1024px){

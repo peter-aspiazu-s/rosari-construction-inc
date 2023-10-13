@@ -4,6 +4,8 @@ import { BannerMainComponent } from '../components/banner/BannerMainComponent';
 import { ExperienceComponent } from '../components/homePage/experience/Experiencie';
 import { SectionServiceContainer } from '../components/homePage/experience/SectionServiceContainer';
 import { ReviewsComponents } from '../components/homePage/reviews/ReviewsComponents';
+import { AboutComponent } from '../components/homePage/about/AboutComponent';
+import { PartnersComponent } from '../components/homePage/partners/PartnersComponent';
 
 
 const HomePage: NextPage = () => {
@@ -20,6 +22,10 @@ const HomePage: NextPage = () => {
       <SectionServiceContainer />
 
       <ReviewsComponents />
+
+      <AboutComponent />
+
+      <PartnersComponent />
     
     </Layout>
   )

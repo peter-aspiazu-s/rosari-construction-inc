@@ -1,0 +1,68 @@
+.infoservicecomponent{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.infoservicecomponent__container{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.infoservicecomponent__title{
+    font-size: 30px;
+    font-weight: 600;
+    color: #333;
+}
+
+.infoservicecomponent__container-info-slide{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.infoservicecomponent__container-info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.infoservicecomponent__container-info2{
+    width: 100%;
+}
+
+.infoservicecomponent__subtitle{
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+.infoservicecomponent__description{
+    color: #6b6b6b;
+    font-weight: 600;
+    line-height: 25px;
+}
+
+
+@media screen and (min-width: 1024px){
+    .infoservicecomponent__container-info-slide{
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .infoservicecomponent__container-info{
+        width: 55%;
+    }
+}
+
+@media screen and (min-width: 1440px){
+    .infoservicecomponent__container{
+        width: 1100px;
+    }
+
+    .infoservicecomponent__container-info-slide{
+        gap: 60px;
+    }
+}

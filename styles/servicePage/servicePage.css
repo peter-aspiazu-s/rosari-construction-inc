@@ -1,0 +1,16 @@
+.servicepage__infoservicecomponent{
+    padding: 70px 0;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.servicepage__accordioncomponent{
+    width: 80%;
+    margin: 0 auto;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
