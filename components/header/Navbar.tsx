@@ -54,17 +54,17 @@ export const Navbar: FC = () => {
                     }}
                 >WINDOWS & DOORS</Link>
                 <Link 
-                    href="/service/projects" 
+                    href="/company-information/projects" 
                     className="navbar__item"
                     style={{
-                        color:path === "/service/projects" ? 'red' : 'aliceblue'
+                        color:path === "/company-information/projects" ? 'red' : 'aliceblue'
                     }}
                 >PROJECTS</Link>
                 <Link 
-                    href="/service/contact" 
+                    href="/company-information/contact" 
                     className="navbar__item"
                     style={{
-                        color:path === "/service/contact" ? 'red' : 'aliceblue'
+                        color:path === "/company-information/contact" ? 'red' : 'aliceblue'
                     }}
                 >CONTACT US</Link>
             </div>

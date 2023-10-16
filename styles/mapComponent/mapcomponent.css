@@ -1,0 +1,24 @@
+.mapcomponent{
+    width: 80%;
+    height: 200px;
+}
+
+@media screen and (min-width: 768px){
+    .mapcomponent{
+        height: 300px;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .mapcomponent{
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media screen and (min-width: 1440px){
+    .mapcomponent{
+        width: 500px;
+        height: 400px;
+    }
+}

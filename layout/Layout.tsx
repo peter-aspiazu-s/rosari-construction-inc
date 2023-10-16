@@ -2,7 +2,6 @@ import { FC, ReactNode, useState } from "react";
 import Head from "next/head";
 import { HeaderComponent } from '../components/header/Header';
 import { SupCallMe } from '../components/supcallme/SupCallMe';
-import { SubMenu } from '../components/header/SubMenu';
 import { FooterComponents } from '../components/footer/FooterComponents';
 
 interface Props {
@@ -27,8 +26,6 @@ export const Layout:FC<Props> = ({title, description, keywords, children}) => {
             <SupCallMe />
 
             <HeaderComponent isOpen={isOpen} setIsOpen={setIsOpen} />
-
-            <SubMenu isOpen={isOpen} setIsOpen={setIsOpen} />
 
             { children }
 

@@ -3,12 +3,34 @@ import { Layout } from "@/layout/Layout";
 import { BannerMainComponent } from '../../components/banner/BannerMainComponent';
 import { InfoServiceComponent } from '../../components/servicePage/infoService/InfoServiceComponent';
 import { ThingService } from '../../components/servicePage/thingService/ThingService';
+import { BrandsComponents } from '../../components/servicePage/brands/BransComponent';
+import { CheckOurOtherServices } from '../../components/servicePage/checkOurOtherServices/CheckOurOtherServices';
 
 
 const imageArray = [
     {
         img: '/images/web2_deck2.jpg',
         alt: 'decks image slide'
+    }
+]
+
+
+const imageBrands = [
+    {
+        img: '/images/atlas-logo.png',
+        alt: 'Atlas logo'
+    },
+    {
+        img: '/images/Owens_Corning_logo.svg_.png',
+        alt: 'Owens logo'
+    },
+    {
+        img: '/images/CT-768x141.png',
+        alt: 'Certain logo'
+    },
+    {
+        img: '/images/gaf-768x699.png',
+        alt: 'GAF logo'
     }
 ]
 
@@ -32,6 +54,18 @@ const DecksPage: NextPage = () => {
             </div>
 
             <ThingService />
+
+            <BrandsComponents 
+                title="Materials We Use"
+                description="We are an exclusive provider of RPI Lumber for our deck builds and offer Color Guard railings as well. Why do we use this product in particular? The material is a high-density polyethylene recycled plastic that doesn’t contain any wood fillers. This is not only an environmentally friendly alternative to lumber, but it’s also long-lasting and 100% maintenance-free."
+            />
+
+            <CheckOurOtherServices 
+                title="Check out our Trim & Gutters services too!"
+                subtitle="Button up your home and keep it dry today!"
+                textButton="Trim & Gutters"
+                link="/service/trim&gutters"
+            />
         </Layout>
     )
 }

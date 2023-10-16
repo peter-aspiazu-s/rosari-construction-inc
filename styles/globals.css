@@ -27,3 +27,13 @@
 @import url(./servicePage/slideServiceComponent.css);
 @import url(./accordion/accordioncomponent.css);
 @import url(./servicePage/thingsService.css);
+@import url(./frequentlyAskedQuestions/frequentlyaskedquestions.css);
+@import url(./contactPage/contactpage.css);
+@import url(./mapComponent/mapcomponent.css);
+@import url(./projectPage/projectscomponent.css);
+@import url(./projectPage/projectspage.css);
+@import url(./servicePage/brandscomponents.css);
+@import url(./servicePage/checkourotherservices.css);
+@import url(./pagination/paginationcomponent.css);
+@import url(./projectPage/otherprojects.css);
+@import url(./projectPage/projectpaginationcomponent.css);

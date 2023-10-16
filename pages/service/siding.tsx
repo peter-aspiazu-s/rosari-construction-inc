@@ -2,6 +2,8 @@ import { NextPage } from "next";
 import { Layout } from "@/layout/Layout";
 import { BannerMainComponent } from '../../components/banner/BannerMainComponent';
 import { InfoServiceComponent } from '../../components/servicePage/infoService/InfoServiceComponent';
+import { BrandsComponents } from '../../components/servicePage/brands/BransComponent';
+import { CheckOurOtherServices } from '../../components/servicePage/checkOurOtherServices/CheckOurOtherServices';
 
 
 const imageArray = [
@@ -41,6 +43,26 @@ const imageArray4 = [
     {
         img: '/images/shutterstock_737220655.jpg',
         alt: 'siding image slide'
+    }
+]
+
+
+const imageBrands = [
+    {
+        img: '/images/atlas-logo.png',
+        alt: 'Atlas logo'
+    },
+    {
+        img: '/images/Owens_Corning_logo.svg_.png',
+        alt: 'Owens logo'
+    },
+    {
+        img: '/images/CT-768x141.png',
+        alt: 'Certain logo'
+    },
+    {
+        img: '/images/gaf-768x699.png',
+        alt: 'GAF logo'
     }
 ]
 
@@ -95,6 +117,21 @@ const SidingPage: NextPage = () => {
                     accordion={false}
                 />
             </div>
+
+
+            <BrandsComponents 
+                title="Brands"
+                description="We are certified installers in all asphalt shingle roofing products. We recommend a 50-Year Lifetime Warranty shingle that is transferable."
+                images={imageBrands}
+            />
+
+
+            <CheckOurOtherServices 
+                title="Check out our windows & doors services too!"
+                subtitle="We can save you money on your energy costs!"
+                textButton="Windows & Doors"
+                link="/service/windows&doors"
+            />
         </Layout>
     )
 }

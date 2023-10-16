@@ -1,0 +1,58 @@
+.projectspage__pagination{
+    width: 100%;
+    background-color: aliceblue;
+    display: flex;
+    justify-content: center;
+    padding: 0 0 50px 0;
+}
+
+.projectspage__pagination__container{
+    width: 80%;
+}
+
+.projectpaginationcomponent{
+    width: 100%;
+    background-color: #eaeaea;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0 0 0;
+}
+
+.projectpaginationcomponent__container{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+.projectpaginationcomponent__title{
+    color: #A80000;
+    font-weight: 600;
+    font-size: 20px;
+    text-align: center;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+
+.projectpaginationcomponent__text{
+    color: #494949;
+    line-height: 25px;
+    font-weight: 600;
+}
+
+.projectpaginationcomponent__container div:nth-child(3){
+    margin-top: 20px;
+}
+.projectpaginationcomponent__container div:nth-child(4){
+    margin-bottom: 20px;
+}
+
+@media screen and (min-width: 1440px){
+    .projectspage__pagination__container{
+        width: 1200px;
+    }
+
+    .projectpaginationcomponent{
+        padding: 50px 0;
+    }
+}

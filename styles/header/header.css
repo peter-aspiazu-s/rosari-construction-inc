@@ -4,6 +4,9 @@
     background-color: aliceblue;
     display: flex;
     justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1003;
 }
 
 .headercomponent__container{
@@ -60,11 +63,22 @@
 
 @media screen and (min-width: 1024px){
     .headercomponent{
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: transparent;
+
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
         position: fixed;
         top: 42px;
         z-index: 1002;
-        height: auto;
+        max-height: 190px;
+        transition: all 0.5s ease;
+    }
+    
+    .scrolled {
+        background-color: rgba(0, 0, 0, 0.5);
+        max-height: 90px; /* Ajusta la altura deseada cuando se desplaza hacia abajo */
     }
 
     .headercomponent__container{
@@ -74,6 +88,12 @@
     .headercomponent__size-image{
         width: 160px;
         height: 120px;
+        transition: all .3s;
+    }
+    
+    .headercomponent__size-image-min{
+        width: 140px;
+        height: 80px;
     }
 
     .headercomponent__container-icomenu svg{
@@ -86,6 +106,13 @@
 }
 
 @media screen and (min-width: 1440px){
+
+    .headercomponent{
+
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
 
     .headercomponent__container{
         width: 1300px;
@@ -100,8 +127,13 @@
     }
 
     .headercomponent__size-image{
-        width: 200px;
-        height: 150px;
+        width: 180px;
+        height: 140px;
+    }
+
+    .headercomponent__size-image-min{
+        width: 140px;
+        height: 80px;
     }
 
     .headercomponent__container-icomenu svg{

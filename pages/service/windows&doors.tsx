@@ -3,12 +3,34 @@ import { Layout } from "@/layout/Layout";
 import { BannerMainComponent } from '../../components/banner/BannerMainComponent';
 import { InfoServiceComponent } from '../../components/servicePage/infoService/InfoServiceComponent';
 import { AccordionComponent } from '../../components/accordion/AccordionComponent';
+import { BrandsComponents } from '../../components/servicePage/brands/BransComponent';
+import { CheckOurOtherServices } from '../../components/servicePage/checkOurOtherServices/CheckOurOtherServices';
 
 
 const imageArray = [
     {
         img: '/images/siding-2.jpg',
         alt: 'windows & doors image slide'
+    }
+]
+
+
+const imageBrands = [
+    {
+        img: '/images/atlas-logo.png',
+        alt: 'Atlas logo'
+    },
+    {
+        img: '/images/Owens_Corning_logo.svg_.png',
+        alt: 'Owens logo'
+    },
+    {
+        img: '/images/CT-768x141.png',
+        alt: 'Certain logo'
+    },
+    {
+        img: '/images/gaf-768x699.png',
+        alt: 'GAF logo'
     }
 ]
 
@@ -56,6 +78,21 @@ const WindowsAndDoorsPage: NextPage = () => {
                     />
                 </div>
             </div>
+
+
+            <BrandsComponents 
+                title="Brands"
+                description="We are certified installers in all asphalt shingle roofing products. We recommend a 50-Year Lifetime Warranty shingle that is transferable."
+                images={imageBrands}
+            />
+
+
+            <CheckOurOtherServices 
+                title="Check out our deck installation services!"
+                subtitle="Add an outdoor living area to your home today!"
+                textButton="Decks"
+                link="/service/decks"
+            />
         </Layout>
     )
 }

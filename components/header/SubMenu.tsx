@@ -2,7 +2,7 @@ import { FC, Dispatch, SetStateAction } from 'react';
 import Link from 'next/link';
 
 interface SubMenuProps {
-    isOpen: boolean; // El estado se pasa como prop
+    isOpen: boolean;
     setIsOpen: Dispatch<SetStateAction<boolean>>;
 }
 
@@ -46,12 +46,12 @@ export const SubMenu: FC<SubMenuProps> = ({isOpen, setIsOpen}) => {
                     onClick={() => setIsOpen(!isOpen)}
                 >Windows & Doors</Link>
                 <Link 
-                    href="/service/projects" 
+                    href="/company-information/projects" 
                     className='submenu__item'
                     onClick={() => setIsOpen(!isOpen)}
                 >Projects</Link>
                 <Link 
-                    href="/service/contact" 
+                    href="/company-information/contact" 
                     className='submenu__item'
                     onClick={() => setIsOpen(!isOpen)}
                 >Contact Us</Link>

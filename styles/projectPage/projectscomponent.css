@@ -1,0 +1,46 @@
+.projectscomponent{
+    width: 100%;
+    background-color: #eaeaea;
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+.projectscomponent__container{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.projectscomponent__title{
+    text-align: center;
+    font-weight: 600;
+    color: rgb(168, 0, 0);
+    font-size: 20px;
+}
+
+.projectscomponent__line::before {
+    content: "";
+    display: block;
+    width: 100%; /* Ancho de la línea, ajusta según tus necesidades */
+    height: 1px; /* Grosor de la línea, ajusta según tus necesidades */
+    background-color: #bbbbbb; /* Color de la línea */
+    margin-bottom: 10px; /* Espacio entre la línea y el contenido del elemento */
+}
+
+.projectscomponent__listitem{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.projectscomponent__item-container{
+    color: #424242;
+}
+
+@media screen and (min-width: 1024px){
+    .projectscomponent{
+        width: 45%;
+    }
+}

@@ -1,7 +1,8 @@
-import { FC, Dispatch, SetStateAction } from "react";
+import { FC, Dispatch, SetStateAction, useState, useEffect, useRef  } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Navbar } from "./Navbar";
+import { SubMenu } from './SubMenu';
 
 interface Props {
     isOpen: boolean;
@@ -9,19 +10,40 @@ interface Props {
 }
 
 export const HeaderComponent: FC<Props> = ({isOpen, setIsOpen}) => {
+
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 100) {
+                setScrolled(true);
+            } else {
+                setScrolled(false);
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
+
     return(
-        <header className="headercomponent">
+        <header className={`headercomponent ${scrolled ? "scrolled" : ""}`}>
             <div className="headercomponent__container">
                 <div className="headercomponent__container-image">
                     <Link href="/" passHref>
-                        <div className="headercomponent__size-image">
-                            <Image src="/images/logo.png" alt="Logo" layout="fill" />
+                        <div className={`headercomponent__size-image ${scrolled ? "headercomponent__size-image-min" : ""}`}>
+                            <Image src="/images/logo-rosari-construction.png" alt="Logo" layout="fill" />
                         </div>
                     </Link>
                 </div>
                 <div className="headercomponent__container-icomenu">
                     <svg 
-                        onClick={() => setIsOpen(!isOpen)}
+                        onClick={() => setIsOpen(!isOpen
+                            )}
                         xmlns="http://www.w3.org/2000/svg" height="30" viewBox="0 -960 960 960" width="30"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
 
                     <Navbar />
@@ -32,6 +54,7 @@ export const HeaderComponent: FC<Props> = ({isOpen, setIsOpen}) => {
                     </p>
                 </div>
             </div>
+            <SubMenu isOpen={isOpen} setIsOpen={setIsOpen} />
         </header>
     )
 }
