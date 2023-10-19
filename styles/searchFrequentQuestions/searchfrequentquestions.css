@@ -1,0 +1,188 @@
+.searchfrequentquestions{
+    position: fixed;
+    right: 0;
+    bottom: 30px;
+    z-index: 1004;
+    display: flex;
+    border-radius: 10px 0 0 10px;
+    box-shadow: -3px 4px 5px 0px #2a2a2a;
+    width: 92%;
+    background-color: #336fb8;
+    transition: transform 0.9s ease-in-out;
+    transform: translateX(0);
+}
+
+.searchfrequentquestions__hidden {
+    transform: translateX(85%);
+}
+
+.searchfrequentquestions__container{
+    display: flex;
+    width: 100%;
+}
+
+.searchfrequentquestions__icon-container{
+    background-color: #336fb8;
+    border-radius: 10px 0 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    cursor: pointer;
+}
+
+.searchfrequentquestions__icon-container svg{
+    fill: aliceblue;
+    width: 35px !important;
+    height: auto !important;
+}
+
+.searchfrequentquestions__search-container{
+    width: 85%;
+    background-color: #4d9be2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 5px 15px 5px 30px;
+}
+
+.searchfrequentquestions__call-container{
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    background-color: #336fb8;
+    border-radius: 8px;
+    padding: 5px;    
+    cursor: pointer;
+}
+
+.searchfrequentquestions__call-container svg{
+    fill: aliceblue;
+    width: 20px;
+}
+
+.searchfrequentquestions__text-call{
+    font-size: 12px;
+    color: aliceblue;
+}
+
+.searchfrequentquestions__form{
+    display: flex;
+    align-items: center;
+    background-color: aliceblue;
+    justify-content: space-between;
+    padding-left: 5px;
+    padding-right: 5px;
+    height: 40px;
+}
+
+.searchfrequentquestions__input{
+    width: 100%;
+    outline: 0;
+    border: 0;
+    height: 100%;
+    background-color: aliceblue;
+}
+
+.searchfrequentquestions__input::placeholder{
+    font-size: 12px;
+}
+
+.searchfrequentquestions__voice-container{
+    width: 200px;
+    display: flex;
+    align-items: center;
+    background-color: #336fb8;
+    border-radius: 8px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.searchfrequentquestions__voice-container svg{
+    width: 30px;
+    fill: aliceblue;
+}
+
+.searchfrequentquestions__voice-text{
+    font-size: 12px;
+    color: aliceblue;
+}
+
+@media screen and (min-width: 425px){
+    .searchfrequentquestions{
+        width: 400px;
+    }
+
+    .searchfrequentquestions__hidden {
+        transform: translateX(88%);
+    }
+
+    .searchfrequentquestions__icon-container{
+        width: 50px;
+    }
+
+    .searchfrequentquestions__search-container{
+        width: 350px;
+    }
+
+    .searchfrequentquestions__call-container svg{
+        width: 30px;
+    }
+    
+    .searchfrequentquestions__text-call{
+        font-size: 15px;
+    }
+
+    .searchfrequentquestions__input::placeholder{
+        font-size: 13px;
+    }
+
+    .searchfrequentquestions__voice-container svg{
+        width: 40px;
+    }
+    
+    .searchfrequentquestions__voice-text{
+        font-size: 15px;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .searchfrequentquestions{
+        top: 100px;
+        bottom: auto;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .searchfrequentquestions{
+        width: 500px;
+    }
+
+    .searchfrequentquestions__hidden {
+        transform: translateX(90%);
+    }
+
+    .searchfrequentquestions__search-container{
+        width: 450px;
+    }
+
+    .searchfrequentquestions__call-container svg{
+        height: 30px;
+    }
+
+    .searchfrequentquestions__text-call{
+        font-weight: 600;
+    }
+
+    .searchfrequentquestions__voice-container{
+        width: 300px;
+    }
+
+    .searchfrequentquestions__voice-container svg{
+        height: 35px;
+    }
+
+    .searchfrequentquestions__voice-text{
+        font-weight: 600;
+    }
+}

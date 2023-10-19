@@ -1,0 +1,25 @@
+.recommendationvideo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0 50px 0;
+    background-color: #d9dfe5;
+}
+
+.recommendationvideo__video{
+    width: 80%;
+    height: 200px;
+}
+
+@media screen and (min-width: 425px){
+    .recommendationvideo__video{
+        width: 300px;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .recommendationvideo__video{
+        width: 500px;
+        height: 250px;
+    }
+}

@@ -37,9 +37,9 @@ const imageBrands = [
 const WindowsAndDoorsPage: NextPage = () => {
     return (
         <Layout
-            title="Roofing | Page"
-            description="Roofing page"
-            keywords="roofing"
+            title="Windows & Doors | Page"
+            description="Windows & Doors page"
+            keywords="Windows & Doors"
         >
             <BannerMainComponent image="/images/web_IMG_4634-1.jpg" imageTitle="Windows and Doors image" />
 

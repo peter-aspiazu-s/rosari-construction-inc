@@ -54,6 +54,7 @@ export const ProjectPaginationComponent: FC = () => {
             <PaginationComponent
                 images={imagesArr}
                 itemsPerPage={4}
+                backgroundColorPagination="#eaeaea"
             />
         </div>
     )

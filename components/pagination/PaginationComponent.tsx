@@ -14,6 +14,7 @@ import lgZoom from 'lightgallery/plugins/zoom';
 interface PaginationProps {
   images: ImagePagination[]; // Un array de URLs de imágenes
   itemsPerPage: number; // Cantidad de imágenes por página
+  backgroundColorPagination: string;
 }
 
 type ImagePagination = {
@@ -21,7 +22,7 @@ type ImagePagination = {
    alt: string;
 }
 
-export const PaginationComponent: FC<PaginationProps> = ({images, itemsPerPage}) => {
+export const PaginationComponent: FC<PaginationProps> = ({images, itemsPerPage, backgroundColorPagination}) => {
 
     const [currentPage, setCurrentPage] = useState(0);
 
@@ -46,9 +47,8 @@ export const PaginationComponent: FC<PaginationProps> = ({images, itemsPerPage})
     }
 
   return (
-    <div className="paginationcomponent">
+    <div className="paginationcomponent" style={{backgroundColor: backgroundColorPagination}}>
         <div className="paginationcomponent__container">
-            {/* <div className="paginationcomponent__image-container"> */}
             <LightGallery
                 elementClassNames='paginationcomponent__image-container'
                 onInit={onInit}
@@ -64,7 +64,6 @@ export const PaginationComponent: FC<PaginationProps> = ({images, itemsPerPage})
                     ))
                 }
             </LightGallery>
-            {/* </div> */}
 
             <div className="paginationcomponent__button-container">
                 <div className={`${currentPage <= 0 ? 'paginationcomponent__button-disable' : 'paginationcomponent__button'}`} onClick={prevPage}>Prev</div>

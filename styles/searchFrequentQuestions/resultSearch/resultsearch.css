@@ -1,0 +1,14 @@
+.resultsearch{
+   transition: all .3s ease;
+   overflow: scroll;
+   max-height: 0;
+   background-color: aliceblue;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+}
+
+.resultsearch__visible{
+    max-height: 300px;
+    padding: 10px;
+}

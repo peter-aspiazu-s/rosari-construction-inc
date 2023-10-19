@@ -3,6 +3,7 @@ import Head from "next/head";
 import { HeaderComponent } from '../components/header/Header';
 import { SupCallMe } from '../components/supcallme/SupCallMe';
 import { FooterComponents } from '../components/footer/FooterComponents';
+import { SearchFrequentQuestions } from '../components/searchFrequentQuestions/SearchFrequentQuestions';
 
 interface Props {
     title: string;
@@ -21,6 +22,7 @@ export const Layout:FC<Props> = ({title, description, keywords, children}) => {
                 <title>{title}</title>
                 <meta name="description" content={description} />
                 <meta name="keywords" content={keywords} />
+                <link rel="shortcut icon" href="/images/logo-rosari-construction.png" />
             </Head>
 
             <SupCallMe />
@@ -30,6 +32,8 @@ export const Layout:FC<Props> = ({title, description, keywords, children}) => {
             { children }
 
             <FooterComponents />
+
+            <SearchFrequentQuestions />
         </>
     )
 }

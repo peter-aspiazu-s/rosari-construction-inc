@@ -43,8 +43,8 @@ export const FrequentlyAskedQuestions: FC = () => {
                             description="Yes. Per New York State code."
                         />
                         <AccordionComponent 
-                            title="I am building a new home. Do you provide"
-                            description="any new construction services?"
+                            title="I am building a new home. Do you provide any new construction services?"
+                            description="Yes. We install roofing, siding, and gutters for many new home builders in WNY."
                         />
                     </div>
 

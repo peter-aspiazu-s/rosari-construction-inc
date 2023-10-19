@@ -4,6 +4,7 @@ import { BannerMainComponent } from '../../components/banner/BannerMainComponent
 import { InfoServiceComponent } from '../../components/servicePage/infoService/InfoServiceComponent';
 import { BrandsComponents } from '../../components/servicePage/brands/BransComponent';
 import { CheckOurOtherServices } from '../../components/servicePage/checkOurOtherServices/CheckOurOtherServices';
+import { PaginationComponent } from '../../components/pagination/PaginationComponent';
 
 
 const imageArray = [
@@ -58,6 +59,46 @@ const imageBrands = [
     }
 ]
 
+
+const imagesArr = [
+    {
+        img: '/images/web_IMG_0216.jpg',
+        alt: 'Project image'
+    },
+    {
+        img: '/images/web_IMG_0214.jpg',
+        alt: 'Project image'
+    },
+    {
+        img: '/images/web_IMG_0213.jpg',
+        alt: 'Project image'
+    },
+    {
+        img: '/images/web_IMG_0168.jpg',
+        alt: 'Project image'
+    },
+    {
+        img: '/images/webIMG_0215.jpg',
+        alt: 'Project image'
+    },
+    {
+        img: '/images/web_IMG_0218.jpg',
+        alt: 'Project image'
+    },
+    {
+        img: '/images/web_IMG_0219.jpg',
+        alt: 'Project image'
+    },
+    {
+        img: '/images/web_IMG_0217.jpg',
+        alt: 'Project image'
+    },
+    {
+        img: '/images/web_IMG_0167.jpg',
+        alt: 'Project image'
+    }
+]
+
 const RoofingPage: NextPage = () => {
     return (
         <Layout
@@ -107,6 +148,12 @@ const RoofingPage: NextPage = () => {
                 title="Brands"
                 description="We are certified installers in all asphalt shingle roofing products. We recommend a 50-Year Lifetime Warranty shingle that is transferable."
                 images={imageBrands}
+            />
+
+            <PaginationComponent 
+                images={imagesArr}
+                itemsPerPage={4}
+                backgroundColorPagination="#eaeaea"
             />
 
             <CheckOurOtherServices 

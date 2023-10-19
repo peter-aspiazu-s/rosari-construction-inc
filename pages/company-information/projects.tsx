@@ -231,6 +231,7 @@ const ProjectsPage: NextPage = () => {
             <PaginationComponent 
                 images={imagesArr}
                 itemsPerPage={4}
+                backgroundColorPagination="#eaeaea"
             />
         </Layout>
     )

@@ -43,9 +43,9 @@ const imageBrands = [
 const TrimAndGuttersPage: NextPage = () => {
     return (
         <Layout
-            title="Roofing | Page"
-            description="Roofing page"
-            keywords="roofing"
+            title="Trim & Gutters | Page"
+            description="Trim & Gutters page"
+            keywords="Trim & Gutters"
         >
             <BannerMainComponent image="/images/web_IMG_0163.jpg" imageTitle="Trim & Gutters image" />
 

@@ -37,3 +37,8 @@
 @import url(./pagination/paginationcomponent.css);
 @import url(./projectPage/otherprojects.css);
 @import url(./projectPage/projectpaginationcomponent.css);
+@import url(./homepage/recommendationVideo/recommendationvideo.css);
+@import url(./homepage/slideRecommendationVideo/sliderecommendationvideo.css);
+@import url(./homepage/videoreview.css);
+@import url(./searchFrequentQuestions/searchfrequentquestions.css);
+@import url(./searchFrequentQuestions/resultSearch/resultsearch.css);

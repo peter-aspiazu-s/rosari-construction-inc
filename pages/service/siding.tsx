@@ -4,6 +4,7 @@ import { BannerMainComponent } from '../../components/banner/BannerMainComponent
 import { InfoServiceComponent } from '../../components/servicePage/infoService/InfoServiceComponent';
 import { BrandsComponents } from '../../components/servicePage/brands/BransComponent';
 import { CheckOurOtherServices } from '../../components/servicePage/checkOurOtherServices/CheckOurOtherServices';
+import { PaginationComponent } from '../../components/pagination/PaginationComponent';
 
 
 const imageArray = [
@@ -66,12 +67,67 @@ const imageBrands = [
     }
 ]
 
+const imagesArr = [
+    {
+        img: '/images/web_IMG_1116.jpg',
+        alt: 'Project image'
+    },
+    {
+        img: '/images/web_IMG_1454.jpg',
+        alt: 'Project image'
+    },
+    {
+        img: '/images/web_IMG_1737.jpg',
+        alt: 'Project image'
+    },
+    {
+        img: '/images/web_IMG_1533.jpg',
+        alt: 'Project image'
+    },
+    {
+        img: '/images/web_IMG_2084.jpg',
+        alt: 'Project image'
+    },
+    {
+        img: '/images/web_IMG_2117.jpg',
+        alt: 'Project image'
+    },
+    {
+        img: '/images/web_IMG_1825.jpg',
+        alt: 'Project image'
+    },
+    {
+        img: '/images/web_IMG_0272.jpg',
+        alt: 'Project image'
+    },
+    {
+        img: '/images/web_IMG_0271.jpg',
+        alt: 'Project image'
+    },
+    {
+        img: '/images/web_IMG_4688.jpg',
+        alt: 'Project image'
+    },
+    {
+        img: '/images/web_IMG_4687.jpg',
+        alt: 'Project image'
+    },
+    {
+        img: '/images/web_IMG_4639.jpg',
+        alt: 'Project image'
+    },
+    {
+        img: '/images/web_IMG_4638.jpg',
+        alt: 'Project image'
+    }
+]
+
 const SidingPage: NextPage = () => {
     return (
         <Layout
-            title="Roofing | Page"
-            description="Roofing page"
-            keywords="roofing"
+            title="Siding | Page"
+            description="Siding page"
+            keywords="siding"
         >
             <BannerMainComponent image="/images/web_IMG_4638-1.jpg" imageTitle="Siding image" />
 
@@ -125,6 +181,11 @@ const SidingPage: NextPage = () => {
                 images={imageBrands}
             />
 
+            <PaginationComponent 
+                images={imagesArr}
+                itemsPerPage={4}
+                backgroundColorPagination="#eaeaea"
+            />
 
             <CheckOurOtherServices 
                 title="Check out our windows & doors services too!"

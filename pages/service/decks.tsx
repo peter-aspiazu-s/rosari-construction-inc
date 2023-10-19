@@ -5,6 +5,7 @@ import { InfoServiceComponent } from '../../components/servicePage/infoService/I
 import { ThingService } from '../../components/servicePage/thingService/ThingService';
 import { BrandsComponents } from '../../components/servicePage/brands/BransComponent';
 import { CheckOurOtherServices } from '../../components/servicePage/checkOurOtherServices/CheckOurOtherServices';
+import { PaginationComponent } from '../../components/pagination/PaginationComponent';
 
 
 const imageArray = [
@@ -34,12 +35,80 @@ const imageBrands = [
     }
 ]
 
+
+const imagesArr = [
+    {
+        img: '/images/web_IMG951678.jpg',
+        alt: 'Project image'
+    },
+    {
+        img: '/images/web_IMG951677.jpg',
+        alt: 'Project image'
+    },
+    {
+        img: '/images/web_IMG_1612.jpg',
+        alt: 'Project image'
+    },
+    {
+        img: '/images/web_IMG_1611.jpg',
+        alt: 'Project image'
+    },
+    {
+        img: '/images/web_IMG_1616.jpg',
+        alt: 'Project image'
+    },
+    {
+        img: '/images/web_IMG_1613.jpg',
+        alt: 'Project image'
+    },
+    {
+        img: '/images/web_IMG_1614.jpg',
+        alt: 'Project image'
+    },
+    {
+        img: '/images/web_IMG_1615.jpg',
+        alt: 'Project image'
+    },
+    {
+        img: '/images/web_IMG_1610.jpg',
+        alt: 'Project image'
+    },
+    {
+        img: '/images/web_IMG_0358.jpg',
+        alt: 'Project image'
+    },
+    {
+        img: '/images/web_IMG_0357.jpg',
+        alt: 'Project image'
+    },
+    {
+        img: '/images/web_IMG_0356.jpg',
+        alt: 'Project image'
+    },
+    {
+        img: '/images/web_IMG_0355.jpg',
+        alt: 'Project image'
+    },
+    {
+        img: '/images/web_IMG_0352.jpg',
+        alt: 'Project image'
+    },
+    {
+        img: '/images/web_IMG_0351.jpg',
+        alt: 'Project image'
+    },
+    {
+        img: '/images/web_deck2.jpg',
+        alt: 'Project image'
+    }
+]
+
 const DecksPage: NextPage = () => {
     return (
         <Layout
-            title="Roofing | Page"
-            description="Roofing page"
-            keywords="roofing"
+            title="Decks | Page"
+            description="Decks page"
+            keywords="decks"
         >
             <BannerMainComponent image="/images/web_IMG_0063.jpg" imageTitle="Decks image" />
 
@@ -58,6 +127,12 @@ const DecksPage: NextPage = () => {
             <BrandsComponents 
                 title="Materials We Use"
                 description="We are an exclusive provider of RPI Lumber for our deck builds and offer Color Guard railings as well. Why do we use this product in particular? The material is a high-density polyethylene recycled plastic that doesn’t contain any wood fillers. This is not only an environmentally friendly alternative to lumber, but it’s also long-lasting and 100% maintenance-free."
+            />
+
+            <PaginationComponent 
+                images={imagesArr}
+                itemsPerPage={4}
+                backgroundColorPagination="#eaeaea"
             />
 
             <CheckOurOtherServices 
