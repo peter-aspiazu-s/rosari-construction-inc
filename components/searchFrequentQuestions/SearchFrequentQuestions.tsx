@@ -1,6 +1,6 @@
 import { FC, useEffect, useState, ChangeEvent, FormEvent } from 'react';
+import { VoiceCapture } from './voiceCapture'
 import { ResultSearch } from './resultSearch/ResultSearch';
-import { VoiceCapture } from '@/components/searchFrequentQuestions/voiceCapture/VoiceCapture';
 
 
 export const SearchFrequentQuestions: FC = () => {
