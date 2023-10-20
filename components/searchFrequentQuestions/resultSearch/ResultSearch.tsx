@@ -8,13 +8,18 @@ interface Props {
 
 export const ResultSearch: FC<Props> = ({termSearch}) => {
 
+    const searchTermLower = termSearch.toLowerCase();
+
     const filterSearchData = searchData.filter(({title, description}) => {
 
         if(termSearch.length <= 0){
             return false;
         }
 
-        return title.includes(termSearch) || description.includes(termSearch);
+        const titleLower = title.toLowerCase();
+        const descriptionLower = description.toLowerCase();
+
+        return titleLower.includes(searchTermLower) || descriptionLower.includes(searchTermLower);
 
     });
 

@@ -176,9 +176,9 @@ const imagesArr = [
 const ProjectsPage: NextPage = () => {
     return (
         <Layout
-            title="Roofing | Page"
-            description="Roofing page"
-            keywords="roofing"
+            title="Projects | Page"
+            description="Projects page"
+            keywords="roofing, siding, window and doors, trim and gutters, decks"
         >
             <BannerMainComponent image="/images/web2_IMG_4620.jpg" imageTitle="Projects image" />
 
