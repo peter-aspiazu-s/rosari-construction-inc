@@ -1,17 +1,22 @@
 import { FC, useEffect, useState, ChangeEvent, FormEvent } from 'react';
 import { ResultSearch } from './resultSearch/ResultSearch';
-import { VoiceCapture } from './VoiceCapture/voiceCapture';
+import { VoiceCapture } from './voiceCapture/VoiceCapture';
 
 
 export const SearchFrequentQuestions: FC = () => {
 
     const [searchView, setSearchView] = useState(false);
-
     const [formData, setFormData] = useState('');
+    const [capturedText, setCapturedText] = useState('');
 
     useEffect(() => {
         setSearchView(!searchView);
     }, []);
+
+    const handleVoiceCapture = (transcript: string) => {
+        setCapturedText(transcript);
+        setFormData(transcript);
+    };
 
     const handleSubmit = (e:FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -21,12 +26,21 @@ export const SearchFrequentQuestions: FC = () => {
         }
 
         setFormData('');
-
     }
 
+    useEffect(() => {
+        if(!searchView){
+            setFormData('');
+            setCapturedText('');
+        }
+    }, [searchView]);
+    
     const handleChange = (e:ChangeEvent<HTMLInputElement>) => {
         setFormData(e.target.value);
+        setCapturedText(e.target.value);
     }
+
+    console.log({capturedText});
 
     return (
         <div className={`searchfrequentquestions ${!searchView ? 'searchfrequentquestions__hidden' : ''}`}>
@@ -55,15 +69,15 @@ export const SearchFrequentQuestions: FC = () => {
                             className='searchfrequentquestions__input' 
                             type="text" 
                             placeholder='What can we helpyou find?' 
-                            name={formData}
-                            value={formData}
+                            name={capturedText ? capturedText : formData}
+                            value={capturedText ? capturedText : formData}
                             onChange={handleChange}
                         />
                     </form>
 
                     <ResultSearch termSearch={formData} />
 
-                    <VoiceCapture />
+                    <VoiceCapture setCapturedText={handleVoiceCapture} />
                 </div>
             </div>
         </div>

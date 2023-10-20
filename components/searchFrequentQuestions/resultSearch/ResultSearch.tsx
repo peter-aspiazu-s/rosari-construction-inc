@@ -23,8 +23,6 @@ export const ResultSearch: FC<Props> = ({termSearch}) => {
 
     });
 
-
-    console.log(filterSearchData);
     return (
         <div className={`resultsearch ${filterSearchData.length > 0 ? 'resultsearch__visible' : ''}`}>
             {
