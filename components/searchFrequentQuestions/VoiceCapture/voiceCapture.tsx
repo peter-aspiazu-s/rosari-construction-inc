@@ -50,7 +50,6 @@ interface Props {
 
 export const VoiceCapture: FC<Props> = ({setCapturedText}) => {
 
-    const [isMicroActive, setIsMicroActive] = useState(false);
     const [isListening, setIsListening] = useState(false);
 
     useEffect(() => {
@@ -77,7 +76,6 @@ export const VoiceCapture: FC<Props> = ({setCapturedText}) => {
     const stopListening = () => {
         setIsListening(false);
         recognition.stop();
-        setIsMicroActive(false);
     }
     
 
