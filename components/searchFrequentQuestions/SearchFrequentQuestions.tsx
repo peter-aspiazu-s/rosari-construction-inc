@@ -11,7 +11,7 @@ export const SearchFrequentQuestions: FC = () => {
 
     useEffect(() => {
         setSearchView(!searchView);
-    }, [searchView]);
+    }, []);
 
     const handleVoiceCapture = (transcript: string) => {
         setCapturedText(transcript);
