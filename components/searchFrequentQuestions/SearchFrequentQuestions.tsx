@@ -1,5 +1,5 @@
 import { FC, useEffect, useState, ChangeEvent, FormEvent } from 'react';
-import { VoiceCapture } from './voiceCapture'
+import { VoiceCapture } from './voiceCaptureComponent/VoiceCapture';
 import { ResultSearch } from './resultSearch/ResultSearch';
 
 
