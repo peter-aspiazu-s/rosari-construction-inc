@@ -40,8 +40,6 @@ export const SearchFrequentQuestions: FC = () => {
         setCapturedText(e.target.value);
     }
 
-    console.log({capturedText});
-
     return (
         <div className={`searchfrequentquestions ${!searchView ? 'searchfrequentquestions__hidden' : ''}`}>
             <div className='searchfrequentquestions__container'>

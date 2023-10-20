@@ -66,7 +66,7 @@ export const VoiceCapture: FC<Props> = ({setCapturedText}) => {
             setIsListening(false);
         };
 
-    }, []);
+    }, [setCapturedText]);
     
     const startListening = () => {
         setCapturedText("");
@@ -79,8 +79,6 @@ export const VoiceCapture: FC<Props> = ({setCapturedText}) => {
         recognition.stop();
         setIsMicroActive(false);
     }
-
-    console.log({isMicroActive})
     
 
   return (
