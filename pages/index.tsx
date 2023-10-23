@@ -1,4 +1,4 @@
-import { NextPage } from "next";
+import { NextPage, GetServerSideProps } from "next";
 import { Layout } from '../layout/Layout';
 import { BannerMainComponent } from '../components/banner/BannerMainComponent';
 import { ExperienceComponent } from '../components/homePage/experience/Experiencie';
@@ -9,6 +9,9 @@ import { PartnersComponent } from '../components/homePage/partners/PartnersCompo
 import { RecommendationVideo } from '../components/homePage/recommendationVideo/RecommendationVideo';
 import { SlideRecommendationVideo } from '../components/homePage/slideRecommendationVideo/SlideRecommendationVideo';
 import { useState } from "react";
+import { MostVisited } from '../components/mostVisited/MostVisited';
+import fetchSurveyResults from './api/survey/fetchSurveyResults';
+import { InitialResults } from '../interface/interface';
 
 
 const imgArr = [
@@ -39,7 +42,8 @@ const imgArr = [
   },
 ]
 
-const HomePage: NextPage = () => {
+
+const HomePage: NextPage<{initialResults: InitialResults}> = ({initialResults}) => {
 
   const [
     linkRecommendationVideo, 
@@ -79,11 +83,24 @@ const HomePage: NextPage = () => {
 
       <AboutComponent />
 
+      <MostVisited initialResults={initialResults} />
+
       <PartnersComponent />
     
     </Layout>
   )
 }
 
+
+export const getServerSideProps: GetServerSideProps = async({req, res}) => {
+
+  const results = await fetchSurveyResults();
+
+  return {
+    props: {
+      initialResults: results,
+    },
+  };
+}
 
 export default HomePage;

@@ -11,10 +11,14 @@
   "dependencies": {
     "@next/font": "^13.5.4",
     "animate.css": "^4.1.1",
+    "chart.js": "^4.4.0",
     "lightgallery": "^2.7.2",
+    "mysql2": "^3.6.2",
     "next": "13.5.4",
     "react": "^18",
+    "react-chartjs-2": "^5.2.0",
     "react-dom": "^18",
+    "sequelize": "^6.33.0",
     "swiper": "^10.3.1"
   },
   "devDependencies": {
