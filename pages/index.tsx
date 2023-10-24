@@ -83,7 +83,7 @@ const HomePage: NextPage<{initialResults: InitialResults}> = ({initialResults}) 
 
       <AboutComponent />
 
-      <MostVisited initialResults={initialResults} />
+      {/* <MostVisited initialResults={initialResults} /> */}
 
       <PartnersComponent />
     
