@@ -43,7 +43,8 @@ const imgArr = [
 ]
 
 
-const HomePage: NextPage<{initialResults: InitialResults}> = ({initialResults}) => {
+const HomePage: NextPage<{initialResults: InitialResults}> = () => {
+// const HomePage: NextPage<{initialResults: InitialResults}> = ({initialResults}) => {
 
   const [
     linkRecommendationVideo, 
@@ -92,15 +93,15 @@ const HomePage: NextPage<{initialResults: InitialResults}> = ({initialResults}) 
 }
 
 
-export const getServerSideProps: GetServerSideProps = async({req, res}) => {
+// export const getServerSideProps: GetServerSideProps = async({req, res}) => {
 
-  const results = await fetchSurveyResults();
+//   const results = await fetchSurveyResults();
 
-  return {
-    props: {
-      initialResults: results,
-    },
-  };
-}
+//   return {
+//     props: {
+//       initialResults: results ? results : [],
+//     },
+//   };
+// }
 
 export default HomePage;
