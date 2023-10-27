@@ -43,8 +43,8 @@ const imgArr = [
 ]
 
 
-const HomePage: NextPage<{initialResults: InitialResults}> = () => {
-// const HomePage: NextPage<{initialResults: InitialResults}> = ({initialResults}) => {
+// const HomePage: NextPage<{initialResults: InitialResults}> = () => {
+const HomePage: NextPage<{initialResults: InitialResults}> = ({initialResults}) => {
 
   const [
     linkRecommendationVideo, 
@@ -84,7 +84,7 @@ const HomePage: NextPage<{initialResults: InitialResults}> = () => {
 
       <AboutComponent />
 
-      {/* <MostVisited initialResults={initialResults} /> */}
+      <MostVisited initialResults={initialResults} />
 
       <PartnersComponent />
     
@@ -93,15 +93,15 @@ const HomePage: NextPage<{initialResults: InitialResults}> = () => {
 }
 
 
-// export const getServerSideProps: GetServerSideProps = async({req, res}) => {
+export const getServerSideProps: GetServerSideProps = async({req, res}) => {
 
-//   const results = await fetchSurveyResults();
+  const results = await fetchSurveyResults();
 
-//   return {
-//     props: {
-//       initialResults: results ? results : [],
-//     },
-//   };
-// }
+  return {
+    props: {
+      initialResults: results ? results : [],
+    },
+  };
+}
 
 export default HomePage;

@@ -8,9 +8,9 @@ interface Props {
 }
 
 type ResponseType = {
-    facebook: number;
-    instagram: number;
-    twitter: number;
+    Facebook: number;
+    Instagram: number;
+    Twitter: number;
 };
 
 export const BarChart: FC<Props> = ({responses}) => {
@@ -21,7 +21,7 @@ export const BarChart: FC<Props> = ({responses}) => {
           {
             label: 'Número de votos',
             backgroundColor: ['#1877F2', '#E4405F', '#1DA1F2'],
-            data: [responses.facebook, responses.instagram, responses.twitter],
+            data: [responses.Facebook, responses.Instagram, responses.Twitter],
           },
         ],
       });
@@ -32,7 +32,7 @@ export const BarChart: FC<Props> = ({responses}) => {
           datasets: [
             {
               ...prevData.datasets[0],
-              data: [responses.facebook, responses.instagram, responses.twitter],
+              data: [responses.Facebook, responses.Instagram, responses.Twitter],
             },
           ],
         }));

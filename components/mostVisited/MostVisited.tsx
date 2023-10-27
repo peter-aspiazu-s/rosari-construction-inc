@@ -3,9 +3,9 @@ import { BarChart } from './BarChart';
 import { SpinnerLoading } from '../spinnerLoading/SpinnerLoading';
 
 type ResponseType = {
-    facebook: number;
-    instagram: number;
-    twitter: number;
+    Facebook: number;
+    Instagram: number;
+    Twitter: number;
 };
   
 interface Props {
@@ -24,7 +24,7 @@ const responseReducer = (state: ResponseType, action: Action): ResponseType => {
             return { ...state, ...action.payload };
         case 'increment':
             const { network } = action;
-            if (network === 'facebook' || network === 'instagram' || network === 'twitter') {
+            if (network === 'Facebook' || network === 'Instagram' || network === 'Twitter') {
                 return { ...state, [network]: state[network] + 1 };
             }
             return state;
@@ -37,12 +37,13 @@ export const MostVisited: FC<Props> = ({ initialResults }) => {
 
   // Define el estado para rastrear las respuestas de los usuarios
   const [responses, dispatch] = useReducer(responseReducer, {
-    facebook: 0,
-    instagram: 0,
-    twitter: 0,
+    Facebook: 0,
+    Instagram: 0,
+    Twitter: 0,
   });
 
   const [loading, setLoading] = useState(true);
+  const [loadingButton, setLoadingButton] = useState(false);
   const [hasVoted, setHasVoted] = useState(false);
 
   useEffect(() => {
@@ -68,6 +69,9 @@ export const MostVisited: FC<Props> = ({ initialResults }) => {
   }, [initialResults]);
 
   const handleResponse = async (option: keyof ResponseType) => {
+
+    setLoadingButton(true);
+
     try {
       const response = await fetch('/api/survey/surveyPost', {
         method: 'POST',
@@ -83,10 +87,12 @@ export const MostVisited: FC<Props> = ({ initialResults }) => {
 
         // Marcar al usuario como que ya ha votado en el localStorage
         localStorage.setItem('hasVoted', 'true');
+        setLoadingButton(false);
         setHasVoted(true);
 
       } else {
         console.error('Error al registrar la respuesta');
+        setLoadingButton(false);
       }
     } catch (error) {
       console.error('Error al realizar la solicitud:', error);
@@ -117,9 +123,30 @@ export const MostVisited: FC<Props> = ({ initialResults }) => {
                       {
                         !hasVoted 
                         && <div className='mostvisited__button-container'>
-                              <button onClick={() => handleResponse('facebook')}>Facebook</button>
-                              <button onClick={() => handleResponse('instagram')}>Instagram</button>
-                              <button onClick={() => handleResponse('twitter')}>Twitter</button>
+                            {
+                              loadingButton
+                              ? <SpinnerLoading />
+                              : <button 
+                                  onClick={() => handleResponse('Facebook')}
+                                  style={{backgroundColor:"#1877F2"}}  
+                                >Facebook</button>
+                            }
+                            {
+                              loadingButton
+                              ? <SpinnerLoading />
+                              : <button 
+                                  onClick={() => handleResponse('Instagram')}
+                                  style={{backgroundColor:"#E4405F"}}
+                                >Instagram</button>
+                            }
+                            {
+                              loadingButton
+                              ? <SpinnerLoading />
+                              : <button 
+                                  onClick={() => handleResponse('Twitter')}
+                                  style={{backgroundColor:"#1DA1F2"}}
+                                >Twitter</button>
+                            }
                            </div>
                       }
                         <div className='mostvisited__graphic'>
