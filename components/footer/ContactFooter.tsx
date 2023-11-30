@@ -23,7 +23,7 @@ export const ContactFooter: FC = () => {
                         </div>
                     </div>
                     <div className='contactfooter__infocontact-text-container'>
-                        <div className={`${dacing_script.className} contactfooter__infocontact-text-title`}>Besroi Roofing & Siding</div>
+                        <div className={`${dacing_script.className} contactfooter__infocontact-text-title`}>Rosari Construction</div>
                         <div className='contactfooter__infocontact-text-subtitle'>Buffalo</div>
                         <a className='contactfooter__infocontact-text-link' href="#">5434 Genesee Street</a>
                         <a className='contactfooter__infocontact-text-link' href="#">Lancaster, NY 14086</a>
