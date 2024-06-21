@@ -5,7 +5,8 @@
     justify-content: center;
     align-items: center;
     padding: 100px 0 60px 0;
-    background-color: #232323;
+    /* background-color: #232323; */
+    background: linear-gradient(to bottom, #3a3a3a, #232323 50%, #232323);
 }
 
 .contactfooter__container-infocontact{
@@ -102,6 +103,11 @@
 
 .contactfooter__socialmedia-facebook{
     width: 30px;
+    fill: aliceblue !important;
+}
+
+.contactfooter__socialmedia-whatsapp{
+    width: 50px;
     fill: aliceblue !important;
 }
 

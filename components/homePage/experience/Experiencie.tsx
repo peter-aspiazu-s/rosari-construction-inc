@@ -1,31 +1,50 @@
 import { FC } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export const ExperienceComponent: FC = () => {
     return(
         <div className="experience">
             <div className="experience__container">
-                <div className="experience__title"><strong>Three Generations</strong> of Roofing & Siding Experience!</div>
+                <div className="experience__title"><strong>Expert Construction Services:</strong> Guarantee of Quality and Durability</div>
                 
                 <div className="experience__text">
                     <div className="experience__text-paragraph1">
-                        A top-quality build comes down to three things: experience, superior-grade materials, and craftsmanship with an eye for detail. At Besroi Roofing & Siding we embody those aspects to deliver the best construction services throughout Western, NY. 
-                        Since 1960, we have been family-owned and operated, tailoring our services including <Link className="experience__text-paragraph-link" href="/service/roofing">roofing</Link>, <Link className="experience__text-paragraph-link" href="/service/siding">siding</Link>, <Link className="experience__text-paragraph-link" href="/service/gutter">gutter</Link>, <Link className="experience__text-paragraph-link" href="/service/window&door">window and door</Link> installations 
-                        and repairs to homeowners. We help our neighbors by price matching and comparing costs for any of the products that we use. Bottom line our buying power allows us to deliver great services using the best products at fair prices.
+                        <p>
+                            To achieve the construction and maintenance that your home needs, it is 
+                            important to have the experience and skills of experts in the construction 
+                            area. Also, is essential to mention that our work is based on the highest 
+                            quality standards, both in materials as in qualified labor, which is the key 
+                            to a highly durable final work that ensure your home is kept in top 
+                            condition.
+                        </p>
+                        <p>
+                            In our company we focus on providing the best construction experience for
+                            our clients. We have a team of professionals that keeps evolving as 
+                            everything around us evolves, always maintaining the experience that only 
+                            the years have provided us, thus being able to give you a work and support
+                            team that can accompany you and advise you throughout the project you 
+                            want to carry out. We know what that the construction market offers us, 
+                            the great variety of prices and their quality.
+                        </p>
+                    </div>
+                    <div className="experience__image">
+                        <Image src="/images/roofing.jpg" alt="roofing image" layout="fill" />
                     </div>
                     <div className="experience__text-paragraph2">
-                        We are proud to be one of the leading home improvement companies in the area as evidenced by winning the 2017 Associate of the Year award presented by the Buffalo Niagara Builders Association.
+                        <p>
+                            In addition, we focus on meeting the deadlines established for each project.
+                            We ensure that your experience is satisfactory and that your home is 
+                            completely transformed and looking impressive as much as you are 
+                            expecting.
+                        </p>
+                        <p>
+                            If you are looking for a high-quality construction and coating service, do 
+                            not hesitate to contact us. 
+                            We will be happy to help and provide all kind of support you require,
+                            everything you need to transform your home in the place of your dreams.
+                        </p>
                     </div>
-                </div>
-                
-                <div className="experience__video">
-                    <video controls>
-                        <source 
-                            src="https://vid.hellonetcdn.com/vid/ny/constructionexchangebuffalowny/biz/nycoexnybu_04_rev_iwd_xtlrg_univ.mp4?e38743f7653b283e6b462af35b4bd035984c93fa9543d8ab36e0645ba1d6286afd6ac75c33887de5f5ca5ce10a794e2d170f" 
-                            type="video/mp4" 
-                        />
-                        Tu navegador no soporta la reproducción de videos.
-                    </video>
                 </div>
             </div>
         </div>

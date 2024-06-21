@@ -32,7 +32,7 @@ export const MenuFooter: FC = () => {
                         color:path === "/service/siding" ? 'red' : '#c0c0c0'
                     }}
                 >SIDING</Link>
-                <Link 
+                {/* <Link 
                     href="/service/decks" 
                     className="menufooter__item"
                     style={{
@@ -52,7 +52,7 @@ export const MenuFooter: FC = () => {
                     style={{
                         color:path === "/service/windows&doors" ? 'red' : '#c0c0c0'
                     }}
-                >WINDOWS & DOORS</Link>
+                >WINDOWS & DOORS</Link> */}
                 <Link 
                     href="/company-information/projects" 
                     className="menufooter__item"

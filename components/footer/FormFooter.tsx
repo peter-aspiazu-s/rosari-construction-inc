@@ -9,13 +9,20 @@ export const FormFooter: FC = () => {
         name: '',
         email:'',
         phone: '',
-        city1: '',
-        city2: '',
+        // city1: '',
+        // city2: '',
         comment: '',
     });
     const [loading, setLoading] = useState(false);
 
-    const {name, email, phone, city1, city2, comment} = formData;
+    const {
+        name, 
+        email, 
+        phone, 
+        // city1, 
+        // city2, 
+        comment
+    } = formData;
 
     const handleSubmit = (e:FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -37,8 +44,8 @@ export const FormFooter: FC = () => {
                 name: '',
                 email:'',
                 phone: '',
-                city1: '',
-                city2: '',
+                // city1: '',
+                // city2: '',
                 comment: '',
             })
         }
@@ -132,7 +139,7 @@ export const FormFooter: FC = () => {
                 onChange={handleChange}
             />
 
-            <div>City</div>
+            {/* <div>City</div>
             <label id="city1" className='formfooter__label-checkbox'>
                 <input 
                     type="checkbox" 
@@ -152,7 +159,7 @@ export const FormFooter: FC = () => {
                     checked={city2 ? true : false}
                 />
                 Rochester
-            </label>
+            </label> */}
 
             <label id="comment">Comment or Message</label>
             <textarea 

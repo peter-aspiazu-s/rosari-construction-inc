@@ -11,12 +11,11 @@ export const AboutComponent: FC = () => {
 
                 <div className="aboutcomponent__text-img">
                     <div className="aboutcomponent__description">
-                        <p>We were founded on November 21st, 1960 by our patriarch, Richard Kaminski, and others. Originally the company was formed to service the new home construction industry. After a couple of years, the company began offering their services to individual homeowners.</p>
-                        <p>When combined, our staff possesses over two centuries of roofing and siding experience. Some started working for Besroi in their late teens and are still here over 30 to 40 years later. All staff members are tested and certified by individual roof manufacturers in the installation of their products. Training is constant in the use and application of new products, tools, and safety.</p>
-                        <p>Our sales staff is made up of employees who have transitioned from working in the field. They know what products will work best on your home. Our office is made up of family who has grown up in the business and is well versed in all aspects of the industry.</p>
+                        <p>Welcome to Rosari Construction, where we transform your vision into a reality through expert craftsmanship and exceptional service. Although we are a new name in the construction industry, our commitment to quality and excellence sets us apart.</p>
+                        <p>We are committed to exceeding your expectations through every phase of your project. From initial consultation to final inspection, we work closely with you to ensure that your needs are met and your vision is realized. We respect your time by adhering to agreed deadlines and strive to make your experience as smooth and satisfying as possible.</p>
                     </div>
                     <div className="aboutcomponent__image">
-                        <Image src="/images/header-768x512.jpg" alt="About image" layout="fill" />
+                        <Image src="/images/siding.jpg" alt="About image" layout="fill" />
                     </div>
                 </div>
             </div>
