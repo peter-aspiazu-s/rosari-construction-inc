@@ -31,16 +31,16 @@ export const SubMenu: FC<SubMenuProps> = ({isOpen, setIsOpen}) => {
                     onClick={() => setIsOpen(!isOpen)}
                 >Siding</Link>
                 <Link 
-                    href="/service/decks" 
+                    href="/service/drywall" 
                     className='submenu__item'
                     onClick={() => setIsOpen(!isOpen)}
-                >Decks</Link>
+                >Drywall</Link>
                 <Link 
-                    href="/service/trim&gutters" 
+                    href="/service/welding" 
                     className='submenu__item'
                     onClick={() => setIsOpen(!isOpen)}
-                >Trim & Gutters</Link>
-                <Link 
+                >Welding</Link>
+                {/* <Link 
                     href="/service/windows&doors" 
                     className='submenu__item'
                     onClick={() => setIsOpen(!isOpen)}
@@ -49,7 +49,7 @@ export const SubMenu: FC<SubMenuProps> = ({isOpen, setIsOpen}) => {
                     href="/company-information/projects" 
                     className='submenu__item'
                     onClick={() => setIsOpen(!isOpen)}
-                >Projects</Link>
+                >Projects</Link> */}
                 <Link 
                     href="/company-information/contact" 
                     className='submenu__item'
