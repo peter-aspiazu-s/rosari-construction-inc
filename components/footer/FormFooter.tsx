@@ -24,30 +24,48 @@ export const FormFooter: FC = () => {
         comment
     } = formData;
 
-    const handleSubmit = (e:FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async(e:FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setLoading(true);
 
-        if(isValid()){
+        if (isValid()) {
+            try {
+                const response = await fetch('/api/sendEmails', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData),
+                });
 
+                if (response.ok) {
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'The form is valid and the email has been sent!',
+                        icon: 'success',
+                        confirmButtonText: 'ok'
+                    });
+                    setFormData({
+                        name: '',
+                        email: '',
+                        phone: '',
+                        comment: '',
+                    });
+                } else {
+                    throw new Error('Failed to send email');
+                }
+            } catch (error) {
+                Swal.fire({
+                    title: 'Error!',
+                    text: 'There was an error sending the email',
+                    icon: 'error',
+                    confirmButtonText: 'ok'
+                });
+            } finally {
+                setLoading(false);
+            }
+        } else {
             setLoading(false);
-
-            Swal.fire({
-                title: 'Success!',
-                text: 'El formulario es válido!',
-                icon: 'success',
-                confirmButtonText: 'ok'
-            });
-
-            console.log({formData});
-            setFormData({
-                name: '',
-                email:'',
-                phone: '',
-                // city1: '',
-                // city2: '',
-                comment: '',
-            })
         }
     }
 
@@ -62,15 +80,15 @@ export const FormFooter: FC = () => {
 
     }
 
-    const handleCityChange = (e: ChangeEvent<HTMLInputElement>) => {
-        const { checked, name } = e.target;
-        // Establece el valor del checkbox en función de la etiqueta correspondiente
-        const cityValue = checked && e.target.nextSibling ? e.target.nextSibling.textContent : '';
-        setFormData({
-          ...formData,
-          [name]: cityValue,
-        });
-      };
+    // const handleCityChange = (e: ChangeEvent<HTMLInputElement>) => {
+    //     const { checked, name } = e.target;
+    //     // Establece el valor del checkbox en función de la etiqueta correspondiente
+    //     const cityValue = checked && e.target.nextSibling ? e.target.nextSibling.textContent : '';
+    //     setFormData({
+    //       ...formData,
+    //       [name]: cityValue,
+    //     });
+    //   };
 
     const isValid = () => {
         if(name.trim().length <= 0){
