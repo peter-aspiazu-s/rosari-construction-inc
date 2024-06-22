@@ -95,7 +95,7 @@ export const FormFooter: FC = () => {
 
             Swal.fire({
                 title: 'Error!',
-                text: 'El nombre es requerido',
+                text: 'The name is required',
                 icon: 'error',
                 confirmButtonText: 'ok'
             });
@@ -106,7 +106,7 @@ export const FormFooter: FC = () => {
             
             Swal.fire({
                 title: 'Error!',
-                text: 'El email es incorrecto',
+                text: 'The email is incorrect',
                 icon: 'error',
                 confirmButtonText: 'ok'
             });
@@ -117,7 +117,7 @@ export const FormFooter: FC = () => {
             
             Swal.fire({
                 title: 'Error!',
-                text: 'El número de teléfono es requerido',
+                text: 'Phone number is required',
                 icon: 'error',
                 confirmButtonText: 'ok'
             });
