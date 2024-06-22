@@ -32,6 +32,20 @@ export const Navbar: FC = () => {
                         color:path === "/service/siding" ? 'red' : 'aliceblue'
                     }}
                 >SIDING</Link>
+                <Link 
+                    href="/service/drywall" 
+                    className="navbar__item"
+                    style={{
+                        color:path === "/service/drywall" ? 'red' : 'aliceblue'
+                    }}
+                >DRYWALL</Link>
+                <Link 
+                    href="/service/welding" 
+                    className="navbar__item"
+                    style={{
+                        color:path === "/service/welding" ? 'red' : 'aliceblue'
+                    }}
+                >WELDING</Link>
                 {/* <Link 
                     href="/service/decks" 
                     className="navbar__item"

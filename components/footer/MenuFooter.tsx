@@ -32,6 +32,20 @@ export const MenuFooter: FC = () => {
                         color:path === "/service/siding" ? 'red' : '#c0c0c0'
                     }}
                 >SIDING</Link>
+                <Link 
+                    href="/service/drywall" 
+                    className="menufooter__item"
+                    style={{
+                        color:path === "/service/drywall" ? 'red' : '#c0c0c0'
+                    }}
+                >DRYWALL</Link>
+                <Link 
+                    href="/service/welding" 
+                    className="menufooter__item"
+                    style={{
+                        color:path === "/service/welding" ? 'red' : '#c0c0c0'
+                    }}
+                >WELDING</Link>
                 {/* <Link 
                     href="/service/decks" 
                     className="menufooter__item"
@@ -53,13 +67,13 @@ export const MenuFooter: FC = () => {
                         color:path === "/service/windows&doors" ? 'red' : '#c0c0c0'
                     }}
                 >WINDOWS & DOORS</Link> */}
-                <Link 
+                {/* <Link 
                     href="/company-information/projects" 
                     className="menufooter__item"
                     style={{
                         color:path === "/company-information/projects" ? 'red' : '#c0c0c0'
                     }}
-                >PROJECTS</Link>
+                >PROJECTS</Link> */}
                 <Link 
                     href="/company-information/contact" 
                     className="menufooter__item"

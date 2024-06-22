@@ -9,7 +9,7 @@ import { PaginationComponent } from '../../components/pagination/PaginationCompo
 
 const imageArray = [
     {
-        img: '/images/web_shutterstock_700859902.jpg',
+        img: '/images/welding.jpg',
         alt: 'siding image slide'
     }
 ]
@@ -122,20 +122,20 @@ const imagesArr = [
     }
 ]
 
-const SidingPage: NextPage = () => {
+const WeldingPage: NextPage = () => {
     return (
         <Layout
-            title="Siding | Page"
-            description="Siding page"
-            keywords="siding"
+            title="Welding | Page"
+            description="Welding page"
+            keywords="welding"
         >
-            <BannerMainComponent image="/images/web_IMG_4638-1.jpg" imageTitle="Siding image" />
+            <BannerMainComponent image="/images/welding.jpg" imageTitle="Welding image" />
 
             <div className="servicepage__infoservicecomponent">
 
                 <InfoServiceComponent 
-                    title="SIDING"
-                    description="Are you looking for information on types of siding, costs, different installation options for your house?"
+                    title="WELDING"
+                    description="Are you looking for information on types of welding, costs, and installation options for your structures?"
                     bold={true}
                     imageArray={imageArray}
                     accordion={false}
@@ -189,13 +189,13 @@ const SidingPage: NextPage = () => {
             /> */}
 
             <CheckOurOtherServices 
-                title="Check out our drywall services too!"
-                subtitle="Let’s enhance and protect your interiors with our professional drywall solutions!"
-                textButton="Drywall"
-                link="/service/drywall"
+                title="Check out our roofing services too!"
+                subtitle="Let’s protect and enhance your home with our expert roofing solutions!"
+                textButton="Roofing"
+                link="/service/Roofing"
             />
         </Layout>
     )
 }
 
-export default SidingPage;
+export default WeldingPage;
