@@ -42,7 +42,18 @@
     text-decoration: none;
 }
 
+@media screen and (min-width: 1024px) {
+    .servicecomponent{
+        width: 40%;
+    }
+}
+
 @media screen and (min-width: 1440px){
+
+    .servicecomponent{
+        width: 350px;
+    }
+
     .servicecomponent svg{
         display: flex;
         position: absolute;

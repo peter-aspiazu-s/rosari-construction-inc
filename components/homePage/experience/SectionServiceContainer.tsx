@@ -24,6 +24,13 @@ export const SectionServiceContainer: FC = () => {
                     image="/images/drywall.jpg"
                     link="/service/drywall"
                 />
+                <ServiceComponent 
+                    title="Welding"
+                    description="Let’s strengthen and secure your structures with our expert welding solutions!
+"
+                    image="/images/welding.jpg"
+                    link="/service/welding"
+                />
             </div>
         </div>
     )
